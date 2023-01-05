@@ -10,12 +10,10 @@ let dateString = newdate.toLocaleDateString("en-US", {
 ---
 
 <li>
-  <a href={url}>
-    <div class="container">
-      <span class="pubDate">{dateString}</span>
-      <span>{title}</span>
-      <span class="readmore">read more</span>
-    </div>
+  <a class="container" href={url}>
+    <span class="pubDate">{dateString}</span>
+    <span>{title}</span>
+    <span class="readmore">read more</span>
   </a>
 </li>
 <style>
@@ -23,23 +21,19 @@ let dateString = newdate.toLocaleDateString("en-US", {
     font-size: 1.3rem;
     padding: 0.2rem;
     list-style: none;
-  }
-
-  a {
-    color: #e5e7eb;
-    text-decoration: none;
-    /* padding: 1rem; */
+    border-bottom: 1px solid #4b5563;
   }
 
   .container {
     display: flex;
     align-items: center;
+    color: #e5e7eb;
+    text-decoration: none;
     padding-bottom: 0.2rem;
     padding-top: 0.2rem;
-    border-bottom: 1px solid #4b5563;
   }
 
-  li:hover {
+  li:hover .container {
     transform: scale(1.01);
     transition: transform 0.3s ease-in-out;
   }

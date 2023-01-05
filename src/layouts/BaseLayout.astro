@@ -2,7 +2,12 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import "../styles/global.css";
-const { pageTitle } = Astro.props;
+const { pageTitle, showImage, message } = Astro.props;
+
+let imageClass = "hidden-image";
+if (showImage) {
+  imageClass = "intro-image";
+}
 ---
 
 <html lang="en">
@@ -13,9 +18,18 @@ const { pageTitle } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <body class='layout'>
+  <body class="layout">
     <Header />
-    <h1>{pageTitle}</h1>
+    <div class="intro">
+      <div>
+        <h1>{pageTitle}</h1>
+        <p>
+          {message}
+        </p>
+      </div>
+
+      <img class={imageClass} src="/assets/headshot.jpg" alt="me" />
+    </div>
     <slot />
     <Footer />
     <script>
@@ -23,3 +37,27 @@ const { pageTitle } = Astro.props;
     </script>
   </body>
 </html>
+
+<style>
+  .intro {
+    display: flex;
+  }
+
+  .intro p {
+    color: #9ca3af;
+    padding-bottom: 0.5rem;
+  }
+
+  .hidden-image {
+    display: none;
+  }
+
+  .intro-image {
+    align-self: center;
+    border-radius: 50%;
+    width: 8rem;
+    border-radius: 9999px;
+    padding: 0.25rem;
+    margin-left: 4rem;
+  }
+</style>

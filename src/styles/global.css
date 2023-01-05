@@ -23,6 +23,7 @@ body {
 }
 
 h1 {
+  padding-top: 2rem;
   margin: 1rem 0;
   font-size: 2.5rem;
 }
