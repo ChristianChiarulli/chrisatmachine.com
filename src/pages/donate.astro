@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import DonationLink from "../components/DonationLink.astro";
+const pageTitle = "Donate";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <p>
+    If you have found my open source work useful, please consider making a
+    donation. All of the software I make, I give away for free. Your support is
+    greatly appreciated and helps me to continue developing and making content.
+  </p>
+
+  <div class="donation-links">
+    <DonationLink link={"asdf"} icon={"mdi:github"} name={"GH Sponsors"} />
+    <DonationLink link={"asdf"} icon={"mdi:paypal"} name={"PayPal"} />
+    <DonationLink link={"asdf"} icon={"mdi:venmo"} name={"Venmo"} />
+    <DonationLink link={"asdf"} icon={"simple-icons:cashapp"} name={"CashApp"} />
+    <DonationLink link={"asdf"} icon={"mdi:patreon"} name={"Patreon"} />
+    <DonationLink link={"asdf"} icon={"simple-icons:kofi"} name={"Ko-fi"} />
+    <DonationLink link={"asdf"} icon={"simple-icons:buymeacoffee"} name={"BuyMeACoffee"} />
+    <DonationLink link={"asdf"} icon={"bi:lightning-charge-fill"} name={"Strike"} />
+    <DonationLink link={"asdf"} icon={"mdi:youtube"} name={"YouTube"} />
+  </div>
+</BaseLayout>
+
+<style>
+  .donation-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    border-top: solid 1px #1f2937;
+    padding-top: 1rem;
+    gap: 1rem;
+    /* margin-top: 5rem; */
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 1.4rem;
+  }
+</style>

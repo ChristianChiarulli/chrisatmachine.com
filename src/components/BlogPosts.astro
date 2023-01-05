@@ -1,22 +1,27 @@
 ---
 import BlogPost from "./BlogPost.astro";
 const allPosts = await Astro.glob("../pages/posts/*.md");
+const { count } = Astro.props;
 ---
 
 <ul>
   {
-    allPosts.map((post) => (
-      <BlogPost
-        url={post.url}
-        title={post.frontmatter.title}
-        date={post.frontmatter.pubDate}
-      />
-    ))
+    allPosts
+      .slice(-count).reverse()
+      .map((post) => (
+        <BlogPost
+          url={post.url}
+          title={post.frontmatter.title}
+          date={post.frontmatter.pubDate}
+        />
+      ))
   }
 </ul>
 
 <style>
   ul {
+    margin: 0;
+    padding-top: 0;
     padding-left: 0;
   }
 </style>

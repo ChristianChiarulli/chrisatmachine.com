@@ -1,29 +1,43 @@
 ---
+import BlogPosts from "../../components/BlogPosts.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 const allPosts = await Astro.glob("../posts/*.md");
 
 const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
-const pageTitle = "Tag Index";
+const pageTitle = "Blog";
 ---
 
 <style>
   a {
-    color: #00539f;
+    color: #f3f4f6;
+    text-decoration: none;
   }
 
   .tags {
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
+    overflow-x: scroll;
+    background-color: #18181b;
+    padding: 0.4rem;
+    margin-bottom: 1rem;
+    border-radius: 0.8rem;
+    gap: 10px;
   }
 
   .tag {
     margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: 0.5em;
+    border: solid 1px #9ca3af;
+    border-radius: 0.8em;
+    text-align: center;
     padding: 0.5em 1em;
-    font-size: 1.15em;
-    background-color: #f8fcfd;
+    font-size: 0.7em;
+    width: 100%;
+    white-space: nowrap;
+    background-color: #212121;
+  }
+
+  .tag:hover {
+    color: #60a5fa;
+    border: solid 1px #d1d5db;
   }
 </style>
 
@@ -31,10 +45,12 @@ const pageTitle = "Tag Index";
   <div class="tags">
     {
       tags.map((tag) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </p>
+        <a href={`/tags/${tag}`}>
+          <p class="tag">{tag}</p>
+        </a>
       ))
     }
   </div>
+
+  <BlogPosts count={8} />
 </BaseLayout>

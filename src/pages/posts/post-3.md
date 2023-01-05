@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: My Third Blog Post
+title: 'Create a blog with Astro'
 author: Astro Learner
 description: "I had some challenges, but asking in the community really helped!"
 image: 

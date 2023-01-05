@@ -3,12 +3,15 @@ import Social from "./Social.astro";
 ---
 
 <div class="socials">
-  <Social platform="youtube" username="@chrisatmachine" />
-  <Social platform="twitch" username="chrisatmachine" />
-  <Social platform="twitter" username="chrisatmachine" />
-  <Social platform="github" username="christianchiarulli" />
-  <Social platform="discord" username="asdfasdf" />
-  <Social platform="medium" username="@chris.machine" />
+  <Social platform="youtube" link="https://www.youtube.com/@chrisatmachine" />
+  <Social platform="twitch" link="https://www.twitch.tv/chrisatmachine" />
+  <Social platform="twitter" link="https://twitter.com/chrisatmachine" />
+  <Social platform="github" link="https://github.com/ChristianChiarulli" />
+  <Social
+    platform="discord"
+    link="https://discord.gg/machine-701530051140780102"
+  />
+  <Social platform="medium" link="https://medium.com/@chris.machine" />
 </div>
 
 <style>
@@ -17,6 +20,6 @@ import Social from "./Social.astro";
     align-self: center;
     gap: 1rem;
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 </style>

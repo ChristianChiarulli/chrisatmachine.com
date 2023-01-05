@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'LunarVim 2.0 new features'
+title: 'Moving from NextJS to AstroJS'
 author: Astro Learner
 description: "This post will show up on its own!"
 image: 

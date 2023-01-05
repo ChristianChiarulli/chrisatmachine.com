@@ -1,27 +1,67 @@
 ---
-import Social from "./Social.astro";
+import { Icon } from "astro-icon";
+import FooterLink from "./FooterLink.astro";
 ---
 
 <footer>
-  <a
-    href={`https://www.youtube.com/@chrisatmachine`}
-    target="_blank"
-    rel="nofollow noopener noreferrer"
-  >
-    youtube
-  </a>
+  <div class="footer-links">
+    <FooterLink link="/" name="Home" />
+    <FooterLink link="/about" name="About" />
+    <FooterLink link="/donate" name="Donate" />
+    <FooterLink link="https://chrisatmachine.myspreadshop.ca/" name="Merch" />
+    <FooterLink link="https://github.com/LunarVim" name="LunarVim" />
+    <FooterLink link="https://github.com/zap-zsh" name="Zap" />
+    <FooterLink link="https://github.com/ChristianChiarulli" name="Github" />
+    <FooterLink link="https://www.youtube.com/@chrisatmachine" name="YouTube" />
+    <FooterLink link="https://matrix.to/#/#atmachine-general:matrix.org" name="Matrix" />
+  </div>
+  <div class="bitcoin">
+    <Icon name={"logos:bitcoin"} />
+    <div class="bitcoin-address">
+      bc1q57jh8rxuzhd6w0rmmeu468c72wwjy7llxt6qgf
+    </div>
+  </div>
 </footer>
 
 <style>
   footer {
-    border-top: 1rem;
-    border-bottom: 1rem;
-    border-color: #333;
     display: flex;
-    align-self: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    border-top: solid 1px #1f2937;
+    padding-top: 1rem;
     gap: 1rem;
-    margin-top: 2rem;
-    /* margin-bottom: 2rem; */
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  .bitcoin {
+    display: flex;
+    padding: 1rem;
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .bitcoin-address {
+    margin-left: 0.5rem;
+  }
+
+  [astro-icon] {
+    width: 1.5rem;
+    color: #9ca3af;
+  }
+
+  a:hover {
+    color: #4b5563;
   }
 </style>
-

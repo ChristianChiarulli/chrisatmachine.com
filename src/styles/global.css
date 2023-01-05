@@ -1,5 +1,5 @@
 html {
-  color: #fff;
+  color: #f9fafb;
   background-color: #111111;
   font-family: sans-serif;
 }
@@ -19,6 +19,7 @@ body {
 .layout {
   display: flex;
   flex-direction: column;
+  /* align-items: center; */
 }
 
 h1 {
@@ -42,17 +43,16 @@ h2 {
   width: 40px;
   height: 5px;
   margin-bottom: 10px;
-  background-color: #222;
+  background-color: #27272a;
 }
 
 .nav-links a {
-  color: #fff;
+  color: #f9fafb;
   text-decoration: none;
 }
 
 .nav-links .nav-link a:hover {
-  background-color: #222;
-  /* font-weight: bold; */
+  background-color: #27272a;
   transform: scale(1.1);
   border-radius: 0.8rem;
 }
@@ -72,11 +72,13 @@ h2 {
   }
 
   .nav-links {
+    padding-top: 1rem;
     display: flex;
     justify-content: space-between;
   }
 
   .nav-links .nav-link a {
+
     padding: 0.5rem 0.8rem;
   }
 

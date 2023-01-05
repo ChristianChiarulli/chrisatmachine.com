@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'LunarVim 2.0 new features'
+title: "Technology I'm learning in 2023" 
 author: Astro Learner
 description: "This post will show up on its own!"
 image: 
@@ -10,3 +10,4 @@ pubDate: 2022-08-08
 tags: ["astro", "successes"]
 ---
 This post should show up with my other blog posts, because `Astro.glob()` is returning a list of all my posts in orde
+

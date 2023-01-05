@@ -10,8 +10,8 @@ import { YouTube } from "@astro-community/astro-embed-youtube";
     <div>
       <h1>Christian Chiarulli</h1>
       <p>
-        Creator and lead maintainer of 🌙 LunarVim and ⚡ Zap. Teaching and streaming
-        software developement.
+        Creator and lead maintainer of 🌙 LunarVim and ⚡ Zap. Teaching and
+        streaming software developement.
       </p>
     </div>
 
@@ -19,22 +19,44 @@ import { YouTube } from "@astro-community/astro-embed-youtube";
   </div>
   <SocialList />
   <h2>Posts</h2>
-  <BlogPosts />
+  <BlogPosts count={4} />
+
+  <div class="readmore">
+    <a href="/blog">Read all posts →</a>
+  </div>
 
   <h2>Latest Video</h2>
   <!-- https://github.com/LuanRT/YouTube.js -->
 
-  <YouTube
-    id="https://www.youtube.com/watch?v=sFA9kX-Ud_c&list=PLhoH5vyxr6QqGu0i7tt_XoVK9v-KvZ3m6"
-  />
+  <div class="video">
+    <YouTube
+      id="https://www.youtube.com/watch?v=sFA9kX-Ud_c&list=PLhoH5vyxr6QqGu0i7tt_XoVK9v-KvZ3m6"
+    />
+  </div>
 </BaseLayout>
 
 <style>
+  .readmore {
+    padding: 1rem 0;
+  }
+
+  .readmore a {
+    color: #6b7280;
+    font-size: 0.8rem;
+    text-decoration: none;
+  }
+
+  .readmore a:hover {
+    text-decoration: underline;
+  }
+
   .intro {
     display: flex;
   }
+
   .intro p {
-    color: #aaa;
+    color: #9ca3af;
+    padding-bottom: 0.5rem;
   }
 
   .intro__image {
@@ -44,6 +66,12 @@ import { YouTube } from "@astro-community/astro-embed-youtube";
     border-radius: 9999px;
     padding: 0.25rem;
     margin-left: 4rem;
-    margin-right: 1rem;
+  }
+
+  .video {
+    /* TODO: find a way to center this */
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
   }
 </style>

@@ -1,0 +1,33 @@
+---
+const { link, name } = Astro.props;
+---
+
+<a href={link} target="_blank" rel="nofollow noopener noreferrer">
+  {name}
+</a>
+
+<style lang="css">
+  a {
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  a:hover {
+    transform: scale(1.1);
+  }
+
+  .donation-link {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    color: #f9fafb;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+
+  .donation-name {
+    margin-left: 0.5rem;
+  }
+</style>

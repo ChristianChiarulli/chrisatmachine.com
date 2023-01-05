@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'LunarVim 2.0 new features'
+title: 'Developer Tools 2023'
 author: Astro Learner
 description: "This post will show up on its own!"
 image: 

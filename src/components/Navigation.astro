@@ -8,10 +8,10 @@ import { Icon } from "astro-icon";
       <a href="/">Home</a>
     </div>
     <div class="nav-link">
-      <a href="/blog">Blog</a>
+      <a href="/tags">Blog</a>
     </div>
     <div class="nav-link">
-      <a href="/tags">Tags</a>
+      <a class="donate-link" href="/donate">Donate</a>
     </div>
   </div>
   <div class="nav-rss">
@@ -25,15 +25,22 @@ import { Icon } from "astro-icon";
   .nav-link-text {
     display: flex;
   }
+
+  .nav-link .donate-link {
+    color: yellow;
+    font-weight: bold;
+  }
+
   [astro-icon] {
     width: 1.5rem;
-    color: #aaa;
+    color: #9ca3af;
   }
+
   [astro-icon]:hover {
     transform: scale(1.1);
   }
 
   [astro-icon="mdi:rss-box"]:hover {
-    color: #FFA500;
+    color: #ffa500;
   }
 </style>

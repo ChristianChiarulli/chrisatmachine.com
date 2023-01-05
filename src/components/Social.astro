@@ -1,10 +1,10 @@
 ---
-const { platform, username } = Astro.props;
+const { platform, link } = Astro.props;
 import { Icon } from "astro-icon";
 ---
 
 <a
-  href={`https://www.${platform}.com/${username}`}
+  href={`${link}`}
   target="_blank"
   rel="nofollow noopener noreferrer"
 >
@@ -13,11 +13,13 @@ import { Icon } from "astro-icon";
 
 <style lang="css">
   a {
-    color: white;
+    color: #f9fafb;
   }
+
   [astro-icon] {
     width: 3.25rem;
   }
+
   [astro-icon]:hover {
     transform: scale(1.1);
   }
