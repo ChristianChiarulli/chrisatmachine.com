@@ -3,30 +3,41 @@ const { platform, username } = Astro.props;
 import { Icon } from "astro-icon";
 ---
 
-<a href={`https://www.${platform}.com/${username}`}
-   target='_blank'
-   rel='nofollow noopener noreferrer'
+<a
+  href={`https://www.${platform}.com/${username}`}
+  target="_blank"
+  rel="nofollow noopener noreferrer"
 >
-
   <Icon name={`ph:${platform}-logo-thin`} />
 </a>
 
 <style lang="css">
   a {
-    /* padding: 0.5rem 1rem; */
     color: white;
-    /* background-color: #333333; */
-    /* border-radius: 0.5rem; */
-    /* text-decoration: none; */
   }
   [astro-icon] {
     width: 3.25rem;
   }
-  [astro-icon="ph:youtube-logo-thin"] {
-    /* color: red; */
-    /* OR */
-    /* fill: red; */
+  [astro-icon]:hover {
+    transform: scale(1.1);
   }
-  [astro-icon="ph:twitch-logo-thin"] {
-    /* color: purple; */
+
+  [astro-icon="ph:youtube-logo-thin"]:hover {
+    color: #ff0000;
+  }
+  [astro-icon="ph:twitch-logo-thin"]:hover {
+    color: #9146ff;
+  }
+  [astro-icon="ph:twitter-logo-thin"]:hover {
+    color: #1da1f2;
+  }
+  [astro-icon="ph:github-logo-thin"]:hover {
+    color: #f05032;
+  }
+  [astro-icon="ph:discord-logo-thin"]:hover {
+    color: #5865f2;
+  }
+  [astro-icon="ph:medium-logo-thin"]:hover {
+    color: #ffc017;
+  }
 </style>

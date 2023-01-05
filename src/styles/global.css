@@ -45,20 +45,16 @@ h2 {
   background-color: #222;
 }
 
-.nav-links {
-  width: 100%;
-  background-color: #222;
-}
-
 .nav-links a {
   color: #fff;
   text-decoration: none;
 }
 
-.nav-links a:hover,
-a:focus {
+.nav-links .nav-link a:hover {
   background-color: #222;
-  border-radius: 1rem;
+  /* font-weight: bold; */
+  transform: scale(1.1);
+  border-radius: 0.8rem;
 }
 
 .expanded {
@@ -70,9 +66,22 @@ a:focus {
     background: none;
   }
 
-  .nav-links a {
-    display: inline-block;
+  .nav-links .nav-rss {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-links .nav-link a {
     padding: 0.5rem 0.8rem;
+  }
+
+  .nav-links .nav-rss a {
+    padding: 0.6rem 0.8rem;
   }
 
   .hamburger {
