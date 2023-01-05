@@ -1,0 +1,22 @@
+---
+import BlogPost from "./BlogPost.astro";
+const allPosts = await Astro.glob("../pages/posts/*.md");
+---
+
+<ul>
+  {
+    allPosts.map((post) => (
+      <BlogPost
+        url={post.url}
+        title={post.frontmatter.title}
+        date={post.frontmatter.pubDate}
+      />
+    ))
+  }
+</ul>
+
+<style>
+  ul {
+    padding-left: 0;
+  }
+</style>

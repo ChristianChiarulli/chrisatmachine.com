@@ -1,9 +1,49 @@
 ---
+import SocialList from "../components/SocialList.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "Home Page";
+import BlogPosts from "../components/BlogPosts.astro";
+import { YouTube } from "@astro-community/astro-embed-youtube";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
+<BaseLayout pageTitle={""}>
+  <div class="intro">
+    <div>
+      <h1>Christian Chiarulli</h1>
+      <p>
+        Creator and lead maintainer of LunarVim and Zap. Teaching and streaming
+        software developement.
+      </p>
+    </div>
+
+    <img class="intro__image" src="/assets/headshot.jpg" alt="me" />
+  </div>
+  <SocialList />
+  <h2>Posts</h2>
+  <BlogPosts />
+
+  <h2>Latest Video</h2>
+  <!-- https://github.com/LuanRT/YouTube.js -->
+
+  <YouTube
+    id="https://www.youtube.com/watch?v=sFA9kX-Ud_c&list=PLhoH5vyxr6QqGu0i7tt_XoVK9v-KvZ3m6"
+  />
 </BaseLayout>
 
+<style>
+  .intro {
+    display: flex;
+  }
+  .intro p {
+    color: #aaa;
+  }
+
+  .intro__image {
+    align-self: center;
+    border-radius: 50%;
+    width: 8rem;
+    border-radius: 9999px;
+    padding: 0.25rem;
+    margin-left: 4rem;
+    margin-right: 1rem;
+  }
+</style>

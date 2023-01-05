@@ -1,0 +1,65 @@
+---
+const { url, title, date } = Astro.props;
+
+let newdate = new Date(Date.parse(date));
+let dateString = newdate.toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+});
+---
+
+<li>
+  <a href={url}>
+    <div class="container">
+      <span class="pubDate">{dateString}</span>
+      <span>{title}</span>
+      <span class="readmore">read more</span>
+    </div>
+  </a>
+</li>
+<style>
+  li {
+    color: #aaa;
+    font-size: 1.3rem;
+    padding: 0.2rem;
+    list-style: none;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    /* padding: 1rem; */
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding-bottom: 0.2rem;
+    padding-top: 0.2rem;
+    border-bottom: 1px solid #333;
+  }
+
+  li:hover span {
+    /* color: #fff; */
+  }
+  li:hover {
+    transform: scale(1.01);
+    transition: all 0.5s;
+  }
+
+  .pubDate {
+    color: #aaa;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-right: 0.8rem;
+  }
+
+  .readmore {
+    color: #aaa;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-left: auto;
+  }
+</style>
