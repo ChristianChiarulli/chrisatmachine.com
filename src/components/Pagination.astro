@@ -1,0 +1,51 @@
+---
+const { page } = Astro.props;
+---
+
+<div class="paginate">
+  {
+    page.url.prev ? (
+      <a class="prev button" href={page.url.prev}>
+        Previous
+      </a>
+    ) : null
+  }
+  {
+    page.url.next ? (
+      <a class="next button" href={page.url.next}>
+        Next
+      </a>
+    ) : null
+  }
+</div>
+
+<style>
+  a {
+    color: #f3f4f6;
+    text-decoration: none;
+  }
+
+  .paginate {
+    display: flex;
+    /* justify-content: space-between; */
+    margin-top: 2rem;
+  }
+
+  .button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.8rem;
+    background-color: #18181b;
+    color: #f3f4f6;
+    border: solid 1px #9ca3af;
+    font-size: 0.8rem;
+    margin: 0 0.5rem;
+  }
+
+  .next {
+    margin-left: auto;
+  }
+
+  .prev {
+    margin-right: auto;
+  }
+</style>

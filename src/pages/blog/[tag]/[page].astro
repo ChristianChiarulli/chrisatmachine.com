@@ -1,5 +1,7 @@
 ---
 import BlogPosts from "../../../components/BlogPosts.astro";
+import Pagination from "../../../components/Pagination.astro";
+import Tagbar from "../../../components/Tagbar.astro";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 
 export async function getStaticPaths({ paginate }) {
@@ -20,55 +22,24 @@ export async function getStaticPaths({ paginate }) {
   });
 }
 const { page } = Astro.props;
-console.log("page: ", page);
-
 const { tag } = Astro.params;
 ---
 
 <BaseLayout pageTitle={tag}>
-  <p>Posts tagged with {tag}</p>
+  <Tagbar />
+  <p>Posts tagged with <span class="tagname">{tag}</span></p>
   <BlogPosts paginate={true} page={page} />
 
-  <div class="paginate">
-    {
-      page.url.prev ? (
-        <a class="prev button" href={page.url.prev}>
-          Previous
-        </a>
-      ) : null
-    }
-    {
-      page.url.next ? (
-        <a class="next button" href={page.url.next}>
-          Next
-        </a>
-      ) : null
-    }
-  </div>
+  <Pagination page={page} />
 </BaseLayout>
 
 <style>
-  .paginate {
-    display: flex;
-    /* justify-content: space-between; */
-    margin-top: 2rem;
+  p {
+    color: #6b7280;
   }
 
-  .button {
-    padding: 0.5rem 1rem;
-    border-radius: 0.8rem;
-    background-color: #18181b;
-    color: #f3f4f6;
-    border: solid 1px #9ca3af;
-    font-size: 0.8rem;
-    margin: 0 0.5rem;
-  }
-
-  .next {
-    margin-left: auto;
-  }
-
-  .prev {
-    margin-right: auto;
+  .tagname {
+    color: #6b7280;
+    font-weight: 600;
   }
 </style>
