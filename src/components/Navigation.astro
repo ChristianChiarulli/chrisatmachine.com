@@ -3,15 +3,15 @@ import { Icon } from "astro-icon";
 ---
 
 <div class="nav-links">
-    <div class="nav-link">
-      <a href="/">Home</a>
-    </div>
-    <div class="nav-link">
-      <a href="/blog/1">Blog</a>
-    </div>
-    <div class="nav-link">
-      <a class="donate-link" href="/donate">Donate</a>
-    </div>
+  <div class="nav-link">
+    <a href="/">Home</a>
+  </div>
+  <div class="nav-link">
+    <a href="/blog/1">Blog</a>
+  </div>
+  <div class="nav-link">
+    <a class="donate-link" href="/donate">Donate</a>
+  </div>
   <!-- <div class="nav-rss"> -->
   <!--   <a href="/tags"> -->
   <!--     <Icon name={`mdi:rss-box`} /> -->
@@ -70,47 +70,11 @@ import { Icon } from "astro-icon";
     color: #ffa500;
   }
 
-  /* Extra Small Devices, Phones */
-  @media only screen and (min-width: 480px) {
-  }
-
   /* Small Devices, Tablets */
   @media only screen and (min-width: 768px) {
-    .nav-links {
-      display: flex;
-      background: none;
-    }
-
-    .nav-link-text {
-      display: flex;
-    }
-
-    .nav-links .nav-rss {
-      align-items: center;
-      justify-content: center;
-    }
-
-    .nav-links {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .nav-links .nav-link a {
-    }
-
-    .nav-links .nav-rss a {
-    }
-
-    .hamburger {
-      display: none;
-    }
   }
 
   /* Medium Devices, Desktops */
   @media only screen and (min-width: 992px) {
-  }
-
-  /* Large Devices, Wide Screens */
-  @media only screen and (min-width: 1200px) {
   }
 </style>

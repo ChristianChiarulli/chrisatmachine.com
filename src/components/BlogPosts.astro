@@ -7,8 +7,9 @@ const { count, paginate, page } = Astro.props;
 <ul>
   {
     paginate
-      ? page.data.map((post) => (
+      ? page.data.map((post, index) => (
           <BlogPost
+            index={index}
             url={post.url}
             title={post.frontmatter.title}
             date={post.frontmatter.pubDate}
@@ -17,8 +18,9 @@ const { count, paginate, page } = Astro.props;
       : allPosts
           .slice(-count)
           .reverse()
-          .map((post) => (
+          .map((post, index) => (
             <BlogPost
+              index={index}
               url={post.url}
               title={post.frontmatter.title}
               date={post.frontmatter.pubDate}

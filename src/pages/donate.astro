@@ -60,4 +60,16 @@ const pageTitle = "Donate";
     text-decoration: none;
     font-size: 1.4rem;
   }
+
+  @media only screen and (min-width: 768px) {
+    .donation-links {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      justify-items: center;
+    }
+
+    p {
+      font-size: 1.4rem;
+    }
+  }
 </style>

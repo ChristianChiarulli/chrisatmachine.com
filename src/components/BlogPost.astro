@@ -1,5 +1,5 @@
 ---
-const { url, title, date } = Astro.props;
+const { index, url, title, date } = Astro.props;
 
 let newdate = new Date(Date.parse(date));
 let dateString = newdate.toLocaleDateString("en-US", {
@@ -11,14 +11,13 @@ let dateString = newdate.toLocaleDateString("en-US", {
 
 <li>
   <a class="container" href={url}>
-    <span>{title}</span>
+    <span><span class="index">0{index + 1}</span>{title}</span>
     <span class="pubDate">{dateString}</span>
-    <!-- <span class="readmore">read more</span> -->
   </a>
 </li>
 <style>
   li {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     list-style: none;
     border-bottom: 1px solid #3f3f46;
   }
@@ -30,12 +29,17 @@ let dateString = newdate.toLocaleDateString("en-US", {
     color: #e5e7eb;
     text-decoration: none;
     padding-top: 1rem;
-    padding-bottom: 0.2rem;
+    padding-bottom: 1rem;
   }
 
   li:hover .container {
     transform: scale(1.01);
     transition: transform 0.3s ease-in-out;
+  }
+
+  .index {
+    color: #71717a;
+    margin-right: 1rem;
   }
 
   .pubDate {
@@ -50,5 +54,13 @@ let dateString = newdate.toLocaleDateString("en-US", {
     font-size: 1rem;
     font-weight: 400;
     margin-left: auto;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 </style>

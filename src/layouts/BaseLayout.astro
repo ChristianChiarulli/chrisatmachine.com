@@ -5,7 +5,9 @@ import "../styles/global.css";
 const { pageTitle, showImage, message } = Astro.props;
 
 let imageClass = "hidden-image";
+let reverse = "";
 if (showImage) {
+  reverse = "reverse";
   imageClass = "intro-image";
 }
 ---
@@ -20,7 +22,7 @@ if (showImage) {
   </head>
   <body class="layout">
     <Header />
-    <div class="intro">
+    <div class=`intro ${reverse}`>
       <img class={imageClass} src="/assets/headshot.jpg" alt="me" />
       <div>
         <h1>{pageTitle}</h1>
@@ -46,6 +48,7 @@ if (showImage) {
   .intro p {
     color: #71717a;
     padding-bottom: 1rem;
+    font-size: 1.1rem;
   }
 
   .hidden-image {
@@ -58,5 +61,25 @@ if (showImage) {
     border-radius: 50%;
     width: 5rem;
     border-radius: 9999px;
+  }
+
+  /* Small Devices, Tablets */
+  @media only screen and (min-width: 768px) {
+    .intro {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .intro-image {
+      width: 7rem;
+      margin-left: 6rem;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
   }
 </style>

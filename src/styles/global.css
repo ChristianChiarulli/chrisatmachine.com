@@ -127,15 +127,29 @@ noscript {
 }
 
 h1 {
-  /* padding: 1rem 0; */
-  /* padding-top: 1rem; */
   margin-top: 2rem;
   font-size: 2rem;
 }
 
 h2 {
-  padding-top: 1rem;
-  /* margin: 1rem 0; */
+  padding-top: 3rem;
+  padding-bottom: 1rem;
   font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 80ch;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
 }
 
