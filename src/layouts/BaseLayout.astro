@@ -21,14 +21,13 @@ if (showImage) {
   <body class="layout">
     <Header />
     <div class="intro">
+      <img class={imageClass} src="/assets/headshot.jpg" alt="me" />
       <div>
         <h1>{pageTitle}</h1>
         <p>
           {message}
         </p>
       </div>
-
-      <img class={imageClass} src="/assets/headshot.jpg" alt="me" />
     </div>
     <slot />
     <Footer />
@@ -41,11 +40,12 @@ if (showImage) {
 <style>
   .intro {
     display: flex;
+    flex-direction: column;
   }
 
   .intro p {
-    color: #9ca3af;
-    padding-bottom: 0.5rem;
+    color: #71717a;
+    padding-bottom: 1rem;
   }
 
   .hidden-image {
@@ -53,11 +53,10 @@ if (showImage) {
   }
 
   .intro-image {
-    align-self: center;
+    align-self: flex-start;
+    margin-top: 2rem;
     border-radius: 50%;
-    width: 8rem;
+    width: 5rem;
     border-radius: 9999px;
-    padding: 0.25rem;
-    margin-left: 4rem;
   }
 </style>

@@ -19,28 +19,18 @@ const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
     text-decoration: none;
   }
 
-  ul {
-    margin: 0;
-    padding-top: 0;
-    padding-left: 0;
-  }
-
   .tags {
     display: flex;
     overflow-x: scroll;
     background-color: #18181b;
-    padding: 0.4rem;
-    margin-bottom: 1rem;
     border-radius: 0.8rem;
     gap: 10px;
   }
 
   .tag {
-    margin: 0.25em;
     border: solid 1px #9ca3af;
     border-radius: 0.8em;
     text-align: center;
-    padding: 0.5em 1em;
     font-size: 0.7em;
     width: 100%;
     white-space: nowrap;

@@ -1,93 +1,141 @@
+
 html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
   color: #f9fafb;
   background-color: #111111;
   font-family: sans-serif;
+
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+
+    body * {
+      animation-duration: 0s !important;
+      animation-delay: 0s !important;
+    }
+  }
 }
 
-body {
-  margin: 0 auto;
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+blockquote,
+body,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+li,
+ol,
+p,
+pre,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul:where([class]) {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  color: inherit;
+  letter-spacing: inherit;
+  font: inherit;
+}
+
+input[type="text"],
+textarea {
   width: 100%;
-  max-width: 80ch;
-  padding: 1rem;
-  line-height: 1.5;
 }
 
-* {
-  box-sizing: border-box;
+fieldset {
+  padding: 0;
+  border: none;
+}
+
+legend {
+  margin-bottom: 0.5rem;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  border: 1px solid gray;
+}
+
+button {
+  padding: 0.75em 1em;
+  border-radius: 0;
+  background-color: transparent;
+  line-height: 1;
+}
+
+button * {
+  pointer-events: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+embed,
+iframe,
+img,
+object,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+noscript {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+[tabindex="-1"] {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .layout {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  padding: 2rem;
 }
 
 h1 {
-  padding-top: 2rem;
-  margin: 1rem 0;
-  font-size: 2.5rem;
-}
-
-h2 {
-  margin: 1rem 0;
+  /* padding: 1rem 0; */
+  /* padding-top: 1rem; */
+  margin-top: 2rem;
   font-size: 2rem;
 }
 
-/* nav styles */
-.hamburger {
-  padding-right: 20px;
-  cursor: pointer;
+h2 {
+  padding-top: 1rem;
+  /* margin: 1rem 0; */
+  font-size: 1.5rem;
 }
 
-.hamburger .line {
-  display: block;
-  width: 40px;
-  height: 5px;
-  margin-bottom: 10px;
-  background-color: #27272a;
-}
-
-.nav-links a {
-  color: #f9fafb;
-  text-decoration: none;
-}
-
-.nav-links .nav-link a:hover {
-  background-color: #27272a;
-  transform: scale(1.1);
-  border-radius: 0.8rem;
-}
-
-.expanded {
-  display: unset;
-}
-
-@media screen and (min-width: 636px) {
-  .nav-links {
-    background: none;
-  }
-
-  .nav-links .nav-rss {
-    align-items: center;
-    justify-content: center;
-  }
-
-  .nav-links {
-    padding-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .nav-links .nav-link a {
-
-    padding: 0.5rem 0.8rem;
-  }
-
-  .nav-links .nav-rss a {
-    padding: 0.6rem 0.8rem;
-  }
-
-  .hamburger {
-    display: none;
-  }
-}

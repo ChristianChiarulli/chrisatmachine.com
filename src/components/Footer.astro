@@ -18,49 +18,48 @@ import FooterLink from "./FooterLink.astro";
       name="Matrix"
     />
   </div>
-  <div class="bitcoin">
-    <Icon name={"logos:bitcoin"} />
-    <div class="bitcoin-address">
-      bc1q57jh8rxuzhd6w0rmmeu468c72wwjy7llxt6qgf
-    </div>
-  </div>
+  <!-- <div class="bitcoin"> -->
+  <!--   <Icon name={"logos:bitcoin"} /> -->
+  <!--   <div class="bitcoin-address"> -->
+  <!--     bc1q57jh8rxuzhd6w0rmmeu468c72wwjy7llxt6qgf -->
+  <!--   </div> -->
+  <!-- </div> -->
 </footer>
 
 <style>
   footer {
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   .footer-links {
+    padding-top: 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
     width: 100%;
-    border-top: solid 1px #1f2937;
-    padding-top: 1rem;
+    border-top: solid 1px #27272a;
     gap: 1rem;
-    margin-top: 5rem;
-    margin-bottom: 1rem;
   }
 
   .bitcoin {
+    padding-top: 1rem;
     display: flex;
-    padding: 1rem;
-    color: #6b7280;
+    align-items: center;
+    color: #52525b;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .bitcoin-address {
-    margin-left: 0.5rem;
   }
 
   [astro-icon] {
-    width: 1.5rem;
-    color: #9ca3af;
+    width: 1rem;
+    margin-right: 0.5rem;
   }
 </style>

@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "Technology I'm learning in 2023" 
+title: 'Zap 0.3 Release'
 author: Astro Learner
 description: "This post will show up on its own!"
 image: 

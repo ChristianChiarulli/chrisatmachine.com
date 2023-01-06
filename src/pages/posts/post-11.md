@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "Technology I'm learning in 2023" 
+title: 'Create a blog with Astro'
 author: Astro Learner
 description: "This post will show up on its own!"
 image: 

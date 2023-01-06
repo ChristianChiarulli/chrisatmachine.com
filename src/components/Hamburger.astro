@@ -1,8 +1,19 @@
 ---
+import { Icon } from "astro-icon";
 ---
 
 <div class="hamburger">
-  <span class="line"></span>
-  <span class="line"></span>
-  <span class="line"></span>
+  <Icon name={"mdi:menu"} />
 </div>
+
+<style>
+  .hamburger {
+    cursor: pointer;
+  }
+
+  [astro-icon] {
+    width: 2rem;
+    margin-right: 0.5rem;
+    color: #a1a1aa;
+  }
+</style>

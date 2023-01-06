@@ -14,7 +14,7 @@ const message =
   message={message}
 >
   <SocialList />
-  <h2>Posts</h2>
+  <h2>Latest Posts</h2>
   <BlogPosts count={4} />
 
   <div class="readmore">
@@ -24,7 +24,7 @@ const message =
   <h2>Latest Video</h2>
   <!-- https://github.com/LuanRT/YouTube.js -->
 
-  <div class="video">
+  <div class="video yt-video">
     <YouTube
       id="https://www.youtube.com/watch?v=sFA9kX-Ud_c&list=PLhoH5vyxr6QqGu0i7tt_XoVK9v-KvZ3m6"
     />
@@ -33,12 +33,12 @@ const message =
 
 <style>
   .readmore {
-    padding: 1rem 0;
+    padding-top: 1rem;
   }
 
   .readmore a {
-    color: #6b7280;
-    font-size: 0.8rem;
+    color: #71717a;
+    font-size: 1.1rem;
     text-decoration: none;
   }
 
@@ -46,10 +46,7 @@ const message =
     text-decoration: underline;
   }
 
-  .video {
-    /* TODO: find a way to center this */
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
+  .yt-video {
+    padding-top: 1rem;
   }
 </style>

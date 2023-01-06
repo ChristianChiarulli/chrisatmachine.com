@@ -11,26 +11,26 @@ let dateString = newdate.toLocaleDateString("en-US", {
 
 <li>
   <a class="container" href={url}>
-    <span class="pubDate">{dateString}</span>
     <span>{title}</span>
-    <span class="readmore">read more</span>
+    <span class="pubDate">{dateString}</span>
+    <!-- <span class="readmore">read more</span> -->
   </a>
 </li>
 <style>
   li {
     font-size: 1.3rem;
-    padding: 0.2rem;
     list-style: none;
-    border-bottom: 1px solid #4b5563;
+    border-bottom: 1px solid #3f3f46;
   }
 
   .container {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     color: #e5e7eb;
     text-decoration: none;
+    padding-top: 1rem;
     padding-bottom: 0.2rem;
-    padding-top: 0.2rem;
   }
 
   li:hover .container {
@@ -39,14 +39,14 @@ let dateString = newdate.toLocaleDateString("en-US", {
   }
 
   .pubDate {
-    color: #6b7280;
+    color: #71717a;
     font-size: 1.1rem;
     font-weight: 400;
-    margin-right: 0.8rem;
+    padding-top: 0.2rem;
   }
 
   .readmore {
-    color: #6b7280;
+    color: #71717a;
     font-size: 1rem;
     font-weight: 400;
     margin-left: auto;

@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "Technology I'm learning in 2023" 
+title: 'Install Hyprland'
 author: Astro Learner
 description: "This post will show up on its own!"
 image: 
