@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import DonationLink from "../components/DonationLink.astro";
+import { Icon } from "astro-icon";
 const pageTitle = "Donate";
 ---
 
@@ -15,25 +16,43 @@ const pageTitle = "Donate";
     <DonationLink link={"asdf"} icon={"mdi:github"} name={"GH Sponsors"} />
     <DonationLink link={"asdf"} icon={"mdi:paypal"} name={"PayPal"} />
     <DonationLink link={"asdf"} icon={"mdi:venmo"} name={"Venmo"} />
-    <DonationLink link={"asdf"} icon={"simple-icons:cashapp"} name={"CashApp"} />
+    <DonationLink
+      link={"asdf"}
+      icon={"simple-icons:cashapp"}
+      name={"CashApp"}
+    />
     <DonationLink link={"asdf"} icon={"mdi:patreon"} name={"Patreon"} />
     <DonationLink link={"asdf"} icon={"simple-icons:kofi"} name={"Ko-fi"} />
-    <DonationLink link={"asdf"} icon={"simple-icons:buymeacoffee"} name={"BuyMeACoffee"} />
-    <DonationLink link={"asdf"} icon={"bi:lightning-charge-fill"} name={"Strike"} />
+    <DonationLink
+      link={"asdf"}
+      icon={"simple-icons:buymeacoffee"}
+      name={"BuyMeACoffee"}
+    />
+    <DonationLink
+      link={"asdf"}
+      icon={"bi:lightning-charge-fill"}
+      name={"Strike"}
+    />
     <DonationLink link={"asdf"} icon={"mdi:youtube"} name={"YouTube"} />
   </div>
 </BaseLayout>
 
 <style>
   .donation-links {
+    padding-top: 2rem;
+    margin-top: 2rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    justify-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    /* grid-template-rows: repeat(1, 1fr); */
+    justify-items: flex-start;
     align-items: center;
     width: 100%;
-    border-top: solid 1px #1f2937;
+    border-top: solid 1px #27272a;
     gap: 1rem;
+  }
+
+  p {
+    color: #71717a;
   }
 
   a {

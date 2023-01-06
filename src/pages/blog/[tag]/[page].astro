@@ -27,19 +27,7 @@ const { tag } = Astro.params;
 
 <BaseLayout pageTitle={"Tag: " + tag}>
   <Tagbar />
-  <p>Posts tagged with <span class="tagname">{tag}</span></p>
   <BlogPosts paginate={true} page={page} />
 
   <Pagination page={page} />
 </BaseLayout>
-
-<style>
-  p {
-    color: #6b7280;
-  }
-
-  .tagname {
-    color: #6b7280;
-    font-weight: 600;
-  }
-</style>
