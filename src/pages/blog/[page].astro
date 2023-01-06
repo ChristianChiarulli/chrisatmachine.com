@@ -1,0 +1,110 @@
+---
+import BlogPosts from "../../components/BlogPosts.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const allPosts = await Astro.glob("../posts/*.md");
+const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+const pageTitle = "Blog";
+
+export async function getStaticPaths({ paginate }) {
+  const allPosts = await Astro.glob("../posts/*.md");
+  return paginate(allPosts, { pageSize: 8 });
+}
+
+const { page } = Astro.props;
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <div class="tags">
+    {
+      tags.map((tag) => (
+        <a href={`/blog/${tag}/1`}>
+          <p class="tag">{tag}</p>
+        </a>
+      ))
+    }
+  </div>
+
+  <BlogPosts paginate={true} page={page} />
+
+  <div class="paginate">
+    {
+      page.url.prev ? (
+        <a class="prev button" href={page.url.prev}>
+          Previous
+        </a>
+      ) : null
+    }
+    {
+      page.url.next ? (
+        <a class="next button" href={page.url.next}>
+          Next
+        </a>
+      ) : null
+    }
+  </div>
+</BaseLayout>
+
+<style>
+  a {
+    color: #f3f4f6;
+    text-decoration: none;
+  }
+
+  ul {
+    margin: 0;
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  .tags {
+    display: flex;
+    overflow-x: scroll;
+    background-color: #18181b;
+    padding: 0.4rem;
+    margin-bottom: 1rem;
+    border-radius: 0.8rem;
+    gap: 10px;
+  }
+
+  .tag {
+    margin: 0.25em;
+    border: solid 1px #9ca3af;
+    border-radius: 0.8em;
+    text-align: center;
+    padding: 0.5em 1em;
+    font-size: 0.7em;
+    width: 100%;
+    white-space: nowrap;
+    background-color: #212121;
+  }
+
+  .tag:hover {
+    color: #60a5fa;
+    border: solid 1px #60a5fa;
+  }
+
+  .paginate {
+    display: flex;
+    /* justify-content: space-between; */
+    margin-top: 2rem;
+  }
+
+  .button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.8rem;
+    background-color: #18181b;
+    color: #f3f4f6;
+    border: solid 1px #9ca3af;
+    font-size: 0.8rem;
+    margin: 0 0.5rem;
+  }
+
+  .next {
+    margin-left: auto;
+  }
+
+  .prev {
+    margin-right: auto;
+  }
+</style>
