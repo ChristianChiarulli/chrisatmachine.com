@@ -12,14 +12,14 @@ import { Icon } from "astro-icon";
   <div class="nav-link">
     <a class="donate-link" href="/donate">Donate</a>
   </div>
-  <!-- <div class="nav-rss"> -->
-  <!--   <a href="/tags"> -->
-  <!--     <Icon name={`mdi:rss-box`} /> -->
-  <!--   </a> -->
-  <!-- </div> -->
+  <div class="nav-rss">
+    <a href="/tags">
+      <Icon name={`mdi:rss-box`} />
+    </a>
+  </div>
 </div>
 
-<style lang="css">
+<style>
   .nav-links {
     display: none;
   }
@@ -35,7 +35,10 @@ import { Icon } from "astro-icon";
     color: #f9fafb;
     font-size: 1.25rem;
     text-decoration: none;
-    padding: 0.875rem;
+  }
+
+  .nav-links .nav-rss {
+    display: none;
   }
 
   .nav-link .donate-link {
@@ -44,8 +47,12 @@ import { Icon } from "astro-icon";
     font-weight: bold;
   }
 
+  .nav-link {
+    padding: 1rem;
+  }
+
   [astro-icon] {
-    width: 1.5rem;
+    width: 2rem;
     color: #9ca3af;
   }
 
@@ -66,11 +73,21 @@ import { Icon } from "astro-icon";
       justify-content: flex-start;
     }
 
-    .nav-links .nav-link a:hover {
+    .nav-link {
+      padding: 0.75rem;
+    }
+
+    .nav-links .nav-link:hover {
       background-color: #27272a;
-      transform: scale(1.1);
       border-radius: 0.8rem;
-      padding: 0.875rem;
+    }
+
+    .nav-links .nav-rss {
+      margin-left: auto;
+    }
+
+    .nav-links .nav-rss {
+      display: block;
     }
   }
 
