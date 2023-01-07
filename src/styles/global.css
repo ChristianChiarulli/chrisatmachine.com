@@ -3,7 +3,8 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   color: #f9fafb;
-  background-color: #111111;
+  /* background-color: #18181b; */
+  background-color: #111;
   font-family: sans-serif;
 
   @media (prefers-reduced-motion: reduce) {
@@ -138,6 +139,22 @@ h2 {
 }
 
 @media only screen and (min-width: 768px) {
+  body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 70ch;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
   body {
     margin: 0 auto;
     width: 100%;

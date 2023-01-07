@@ -35,20 +35,7 @@ import { Icon } from "astro-icon";
     color: #f9fafb;
     font-size: 1.25rem;
     text-decoration: none;
-  }
-
-  .nav-links .nav-link a:hover {
-    background-color: #27272a;
-    transform: scale(1.1);
-    border-radius: 0.8rem;
-  }
-
-  /* .nav-link-text { */
-  /*   display: flex; */
-  /* } */
-
-  .nav-link {
-    padding: 1rem;
+    padding: 0.875rem;
   }
 
   .nav-link .donate-link {
@@ -72,6 +59,19 @@ import { Icon } from "astro-icon";
 
   /* Small Devices, Tablets */
   @media only screen and (min-width: 768px) {
+    .nav-links {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .nav-links .nav-link a:hover {
+      background-color: #27272a;
+      transform: scale(1.1);
+      border-radius: 0.8rem;
+      padding: 0.875rem;
+    }
   }
 
   /* Medium Devices, Desktops */

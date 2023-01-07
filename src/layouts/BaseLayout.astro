@@ -46,6 +46,7 @@ if (showImage) {
   }
 
   .intro p {
+    padding-top: 0.625rem;
     color: #71717a;
     padding-bottom: 1rem;
     font-size: 1.1rem;
@@ -75,11 +76,19 @@ if (showImage) {
 
     .intro-image {
       width: 7rem;
-      margin-left: 6rem;
     }
 
     .reverse {
       flex-direction: row-reverse;
     }
+  }
+
+  @media only screen and (min-width: 992px) {
+
+    .intro-image {
+      width: 10rem;
+      margin-left: 4rem;
+    }
+
   }
 </style>

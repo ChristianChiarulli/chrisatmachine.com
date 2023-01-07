@@ -11,8 +11,11 @@ let dateString = newdate.toLocaleDateString("en-US", {
 
 <li>
   <a class="container" href={url}>
-    <span><span class="index">0{index + 1}</span>{title}</span>
-    <span class="pubDate">{dateString}</span>
+    <span class="index">0{index + 1}</span>
+    <div class="postinfocontainer">
+      <div>{title}</div>
+      <div class="pubDate">{dateString}</div>
+    </div>
   </a>
 </li>
 <style>
@@ -24,12 +27,18 @@ let dateString = newdate.toLocaleDateString("en-US", {
 
   .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     color: #e5e7eb;
     text-decoration: none;
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .postinfocontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   li:hover .container {
@@ -58,7 +67,12 @@ let dateString = newdate.toLocaleDateString("en-US", {
 
   @media only screen and (min-width: 768px) {
     .container {
-      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    .postinfocontainer {
+      width: 100%;
       flex-direction: row;
       justify-content: space-between;
     }
