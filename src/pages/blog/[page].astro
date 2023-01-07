@@ -15,7 +15,15 @@ const { page } = Astro.props;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
+  <h1>Blog</h1>
   <Tagbar />
   <BlogPosts paginate={true} page={page} />
   <Pagination page={page} />
 </BaseLayout>
+
+<style>
+  h1 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+</style>

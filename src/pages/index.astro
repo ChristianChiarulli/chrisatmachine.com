@@ -13,6 +13,15 @@ const message =
   showImage={true}
   message={message}
 >
+  <div class=`intro reverse`>
+    <img class="intro-image" src="/assets/headshot.jpg" alt="me" />
+    <div>
+      <h1>Christian Chiarulli</h1>
+      <p>
+        {message}
+      </p>
+    </div>
+  </div>
   <SocialList />
   <h2>Latest Posts</h2>
   <BlogPosts count={4} />
@@ -53,5 +62,55 @@ const message =
     aspect-ratio: 16/9;
     height: auto;
     padding-top: 1rem;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .intro p {
+    padding-top: 0.625rem;
+    color: #71717a;
+    padding-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .hidden-image {
+    display: none;
+  }
+
+  .intro-image {
+    align-self: flex-start;
+    margin-top: 2rem;
+    border-radius: 50%;
+    width: 5rem;
+    border-radius: 9999px;
+  }
+
+  /* Small Devices, Tablets */
+  @media only screen and (min-width: 768px) {
+    .intro {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .intro-image {
+      width: 7rem;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    .intro-image {
+      width: 10rem;
+      margin-left: 4rem;
+    }
   }
 </style>

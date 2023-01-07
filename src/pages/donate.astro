@@ -1,11 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import DonationLink from "../components/DonationLink.astro";
-import { Icon } from "astro-icon";
 const pageTitle = "Donate";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
+  <h1>Donate</h1>
   <p>
     If you have found my open source work useful, please consider making a
     donation. All of the software I make, I give away for free. Your support is
@@ -38,6 +38,11 @@ const pageTitle = "Donate";
 </BaseLayout>
 
 <style>
+  h1 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
   .donation-links {
     padding-top: 2rem;
     margin-top: 2rem;

@@ -25,9 +25,17 @@ const { page } = Astro.props;
 const { tag } = Astro.params;
 ---
 
-<BaseLayout pageTitle={"Tag: " + tag}>
+<BaseLayout>
+  <h1>{"Tag: " + tag}</h1>
   <Tagbar />
   <BlogPosts paginate={true} page={page} />
 
   <Pagination page={page} />
 </BaseLayout>
+
+<style>
+  h1 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+</style>
