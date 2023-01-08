@@ -13,14 +13,72 @@ import { Icon } from "astro-icon";
     <a class="donate-link" href="/donate">Donate</a>
   </div>
   <div class="nav-rss">
-    <a href="/tags">
-      <Icon name={`mdi:rss-box`} />
-    </a>
+    <!-- <Icon name={`mdi:rss-box`} /> -->
+    <button id="connect-button" class="connect-button">
+      <Icon name={"mdi:lightning-bolt"} />
+      Tip</button
+    >
+    <button class="tip-button">Tip</button>
+  </div>
+  <div class="popup" id="myPopup">
+    <Icon id="close-popup" name={"mdi:close"} />
+    <p>Pay with Lightning</p>
+    <input id="tip-input" type="number" placeholder="Value in Sats" />
+    <button class="send-button">
+      <Icon name={"mdi:lightning-bolt"} />
+      Send</button
+    >
   </div>
 </div>
 
 <style>
+  p {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .connect-button,
+  .tip-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    /* background-color: #4caf50; */
+    background-color: #fde047;
+    border: none;
+    color: #111;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .tip-button {
+    display: none;
+  }
+
+  .tip-enabled {
+    display: inline-block;
+  }
+
+  .connect-button:hover {
+    /* background-color: #45a049; */
+    background-color: #facc15;
+  }
+
+  .tip-button:hover {
+    /* background-color: #45a049; */
+    background-color: #eab308;
+  }
+
   .nav-links {
+    display: none;
+  }
+
+  .hidden {
     display: none;
   }
 
@@ -52,8 +110,16 @@ import { Icon } from "astro-icon";
   }
 
   [astro-icon] {
-    width: 2rem;
-    color: #9ca3af;
+    width: 1.5rem;
+    color: #111;
+  }
+
+  [astro-icon="mdi:close"] {
+    color: #c1c1c1;
+    padding: 0.1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    align-self: flex-end;
   }
 
   [astro-icon]:hover {
@@ -91,6 +157,57 @@ import { Icon } from "astro-icon";
     .nav-links .nav-rss {
       display: block;
     }
+  }
+
+  .popup {
+    z-index: 100;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 220px;
+    background-color: #1e1e1e;
+    border-radius: 0.8rem;
+    border: 1px solid #c1c1c1;
+    display: none;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+
+  textarea:focus,
+  input:focus {
+    outline: none !important;
+    border: 1px solid #60a5fa;
+    /* box-shadow: 0 0 10px #719ECE; */
+  }
+
+  .popup input {
+    color: #fff;
+    background-color: #272727;
+    padding: 0.5rem;
+    width: 50%;
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-radius: 0.8rem;
+  }
+
+  .popup button {
+    width: 60%;
+    border-radius: 0.8rem;
+    background-color: #fde047;
+    color: #111;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popup button:hover {
+    background-color: #facc15;
   }
 
   /* Medium Devices, Desktops */
