@@ -26,10 +26,10 @@ import { Icon } from "astro-icon";
   <div class="popup" id="myPopup">
     <Icon id="close-popup" name={"mdi:close"} />
     <p>Pay with Lightning</p>
-    <input id="tip-input" type="number" placeholder="Value in Sats" />
+    <input id="tip-input" type="number" placeholder="Satoshis" />
     <button class="send-button">
       <Icon name={"mdi:lightning-bolt"} />
-      Send</button
+      Send Sats</button
     >
   </div>
 </div>
@@ -175,6 +175,7 @@ import { Icon } from "astro-icon";
     height: 220px;
     background-color: #1e1e1e;
     border-radius: 0.8rem;
+    box-shadow: 0 0 0 100vmax #0007;
     border: 1px solid #c1c1c1;
     display: none;
     flex-direction: column;
@@ -193,16 +194,16 @@ import { Icon } from "astro-icon";
     color: #fff;
     background-color: #272727;
     padding: 0.5rem;
-    width: 50%;
+    width: 70%;
     height: 30px;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 16px;
-    border-radius: 0.8rem;
+    border-radius: 0.4rem;
   }
 
   .popup button {
-    width: 60%;
+    width: 50%;
     border-radius: 0.8rem;
     background-color: #fde047;
     color: #111;

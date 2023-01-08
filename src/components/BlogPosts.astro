@@ -12,7 +12,7 @@ const posts = paginate ? page.data : allPosts.slice(-count).reverse();
         index={index}
         url={post.url}
         title={post.frontmatter.title}
-        date={post.frontmatter.pubDate}
+        date={post.frontmatter.date}
       />
     ))
   }

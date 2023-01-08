@@ -1,31 +1,17 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'Neovim Installation Methods'
-author: Astro Learner
-description: "This post will show up on its own!"
-image: 
-  url: "https://astro.build/assets/hero_NkT0b.avif"
-  alt: "Earth seen from space."
-pubDate: 2022-08-08
-tags: ["neovim"] 
+title: Neovim Different Installation Methods Pros & Cons
+date: 2022-07-01
+tags: ["neovim"]
 ---
 
 I'm going to show you 3 different ways to install Neovim. Most of you are likely just using whatever package manager you have available, but there are some good reasons to use the other methods as well.
-
 
 ## Method #1: Package Manager
 
 This is likely the way most people are going to install Neovim. Package managers handle choosing the version for you, updating, upgrading and etc. They abstract away all of the details and will be the *easiest* way to install most things.
 
 Some good reasons to not use your package manager are: not wanting to update/upgrade while updating the rest of your packages. Or conversely you may want to use the latest(nightly) version to try out new features.
-
-```js
-arr = [1, 2, 3, 4]
-
-const test = arr.map(x =>) {
-  return x**2
-}
-```
 
 **Install**:
 
@@ -64,7 +50,7 @@ cons:
 
 **Install**:
 
-  ```sh
+  ```
   curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 
   mv nvim.appimage nvim
@@ -78,7 +64,7 @@ cons:
 
 **Uninstall**:
 
-  ```sh
+  ```
   sudo rm /usr/local/bin/nvim
   ```
 
@@ -159,3 +145,4 @@ cons:
 ## Resources
 
 - [r/Neovim install wiki](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+
