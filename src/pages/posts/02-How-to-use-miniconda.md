@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: Managing Environments with Miniconda 
-date: 2019-06-25
-tags: ["python"]
+date: 2022-06-18
+tags: ['python']
 ---
 
 The previous article explains how to properly install and configure Miniconda. This article will explain how to manage your environments.

@@ -1,6 +1,8 @@
 import { defineConfig } from "astro/config";
+import vercel from "@astrojs/vercel/serverless";
 
-export default {
+// https://astro.build/config
+export default defineConfig({
   markdown: {
     shikiConfig: {
       // https://github.com/shikijs/shiki/blob/main/docs/themes.md
@@ -10,9 +12,11 @@ export default {
       // https://github.com/shikijs/shiki/blob/main/docs/languages.md
       langs: [],
       // Enable word wrap to prevent horizontal scrolling
-      wrap: true,
-    },
+      wrap: true
+    }
   },
-};
+  output: "server",
+  adapter: vercel()
+});
 
 // https://astro.build/config
