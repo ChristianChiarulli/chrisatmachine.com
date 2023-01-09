@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: Changing remote Git repo
-date: 2020-07-18
+pubDate: 2020-07-18
 tags: ["git"]
 ---
 

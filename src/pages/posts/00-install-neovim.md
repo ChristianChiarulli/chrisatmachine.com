@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: Neovim Different Installation Methods Pros & Cons
-date: 2022-07-01
+pubDate: 2022-07-01
 tags: ["neovim"]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: Install Multiple Versions of Java with SDKMAN
-date: 2021-03-12
+pubDate: 2021-03-12
 tags: ["java"]
 ---
 

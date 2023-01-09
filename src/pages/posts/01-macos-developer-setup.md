@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: MacOS Developer Setup
-date: 2022-06-18
+pubDate: 2022-06-18
 tags: ['macOS']
 ---
 

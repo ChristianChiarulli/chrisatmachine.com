@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: Installing DWM
-date: 2022-07-01
+pubDate: 2022-07-01
 tags: ["dwm"]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: Merging an Upstream Repo into your Fork
-date: 2022-12-22
+pubDate: 2022-12-22
 tags: ["git"]
 ---
 
