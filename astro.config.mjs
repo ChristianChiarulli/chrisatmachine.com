@@ -2,6 +2,9 @@ import { defineConfig } from "astro/config";
 import vercel from '@astrojs/vercel/static';
 
 // https://astro.build/config
+import react from "@astrojs/react";
+
+// https://astro.build/config
 export default defineConfig({
   markdown: {
     shikiConfig: {
@@ -16,7 +19,8 @@ export default defineConfig({
     }
   },
   output: "static",
-  adapter: vercel()
+  adapter: vercel(),
+  integrations: [react()]
 });
 
 // https://astro.build/config

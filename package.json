@@ -12,11 +12,17 @@
   },
   "dependencies": {
     "@astro-community/astro-embed-youtube": "^0.2.1",
+    "@astrojs/react": "^1.2.2",
     "@astrojs/rss": "^2.0.0",
     "@astrojs/vercel": "^2.4.0",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
     "astro": "^1.8.0",
     "astro-icon": "^0.8.0",
     "nostr-tools": "^1.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1",
     "websocket-polyfill": "^0.0.3"
   }
 }

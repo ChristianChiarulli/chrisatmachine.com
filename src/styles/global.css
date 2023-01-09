@@ -191,3 +191,22 @@ h2 {
   }
 }
 
+
+  .connect-button,
+  .tip-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    /* background-color: #4caf50; */
+    background-color: #fde047;
+    border: none;
+    color: #111;
+    padding: 0.5rem 1rem;
+    border-radius: 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
