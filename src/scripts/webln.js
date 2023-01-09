@@ -1,9 +1,9 @@
-const connected = localStorage.getItem("connected");
+// const connected = localStorage.getItem("connected");
 
-if (connected === "true") {
-  document.querySelector(".connect-button").classList.toggle("hidden");
-  document.querySelector(".tip-button").classList.toggle("tip-enabled");
-}
+// if (connected === "true") {
+//   document.querySelector(".connect-button").classList.toggle("hidden");
+//   document.querySelector(".tip-button").classList.toggle("tip-enabled");
+// }
 
 document.addEventListener("DOMContentLoaded", async () => {
   console.log("Connection Cached");
