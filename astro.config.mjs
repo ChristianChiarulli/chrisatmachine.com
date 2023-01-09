@@ -15,8 +15,8 @@ export default defineConfig({
       wrap: true
     }
   },
-  // output: "server",
-  // adapter: vercel()
+  output: "static",
+  adapter: vercel()
 });
 
 // https://astro.build/config
