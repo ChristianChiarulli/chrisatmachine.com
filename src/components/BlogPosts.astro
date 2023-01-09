@@ -1,6 +1,6 @@
 ---
 import BlogPost from "./BlogPost.astro";
-const allPosts = await Astro.glob("../pages/posts/*.md");
+const allPosts = await Astro.glob("../pages/**/*.md");
 const { count, paginate, page } = Astro.props;
 const posts = paginate ? page.data : allPosts.slice(-count).reverse();
 ---
