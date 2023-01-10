@@ -13,25 +13,49 @@ const LightningButton = () => {
       setRender(true);
     }, 70);
 
-    const connected = localStorage.getItem("connected");
+    // const getConnectedSession = async () => {
+    const connected = sessionStorage.getItem("connected");
 
-    const getConnected = async () => {
+    // }
+
+    const getConnected = async (connected) => {
+      // console.log("CONNECTED:", connected);
+      let enabled = false;
       if (connected === "true") {
-        const enabled = await window.webln.enable();
+        enabled = await window.webln.enable();
         setConnected(true);
       }
+      return enabled;
     };
 
-    getConnected();
+    getConnected(connected);
+
+    if (!getConnected) {
+      const connected2 = sessionStorage.getItem("connected");
+
+      setTimeout(() => {
+        setRender(true);
+      }, 300);
+
+      getConnected(connected2);
+    }
 
     console.log("connected", connected);
   }, []);
+
+  function waitForLocalStorage(key, cb, timer) {
+    if (!sessionStorage.getItem(key))
+      return (timer = setTimeout(waitForLocalStorage.bind(null, key), 100));
+    clearTimeout(timer);
+    if (typeof cb !== "function") return localStorage.getItem(key);
+    return cb(localStorage.getItem(key));
+  }
 
   const connectHandler = async () => {
     if (typeof window.webln !== "undefined") {
       const enabled = await window.webln.enable();
 
-      localStorage.setItem("connected", "true");
+      sessionStorage.setItem("connected", "true");
     }
     console.log("connected");
     setConnected(true);
@@ -61,7 +85,7 @@ const LightningButton = () => {
                 size="17"
                 style={{ marginRight: ".4rem" }}
               />
-              Login
+              Tip
             </button>
           )}
         </div>
