@@ -1,5 +1,25 @@
 {
-  "name": "@example/minimal",
+  "name": "chrisatmachine",
+  "description": "My personal website",
+  "author": "Christian Chiarulli",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChristianChiarulli/chrisatmachine.com"
+  },
+  "keywords": [
+    "astro",
+    "react",
+    "typescript",
+    "javascript",
+    "chrisatmachine",
+    "chris at machine",
+    "chris@machine",
+    "chris at machine website",
+    "chrisatmachine website",
+    "chris@machine website",
+    "chrisatmachine.com"
+  ],
   "type": "module",
   "version": "0.0.1",
   "private": true,
