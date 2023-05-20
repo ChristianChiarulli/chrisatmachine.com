@@ -2,7 +2,7 @@ import { useStore } from "@nanostores/react";
 import { connected } from "../store/lightning";
 import { useEffect } from "react";
 
-import { BsLightningChargeFill } from "react-icons/bs";
+import { BsLightningChargeFill } from "react-icons/bs/index";
 
 export default function LightningButton() {
   const $connected = useStore(connected);
