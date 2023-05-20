@@ -1,7 +1,6 @@
 ---
 import { Icon } from "astro-icon";
 import LightningButton from "./LightningButton";
-// import LightningButton from './LightningButton.jsx';
 ---
 
 <div class="nav-links">
@@ -15,23 +14,13 @@ import LightningButton from "./LightningButton";
     <a class="donate-link" href="/donate">Donate</a>
   </div>
   <div class="nav-rss">
-    <!-- <Icon name={`mdi:rss-box`} /> -->
-    <LightningButton client:only="react" />
-    <!-- <button id="connect-button" class="connect-button"> -->
-    <!--   <Icon name={"mdi:lightning-bolt"} /> -->
-    <!--   Login</button -->
-    <!-- > -->
-    <!-- <button class="tip-button"> -->
-    <!--   <Icon name={"mdi:lightning-bolt"} /> -->
-    <!--   Tip</button -->
-    <!-- > -->
+    <LightningButton client:load />
   </div>
   <div class="popup" id="myPopup">
     <Icon id="close-popup" name={"mdi:close"} />
     <p>Pay with Lightning</p>
     <input id="tip-input" type="number" placeholder="Satoshis" />
     <button class="send-button">
-      <!-- <Icon name={"mdi:lightning-bolt"} /> -->
       Send Sats</button
     >
   </div>
