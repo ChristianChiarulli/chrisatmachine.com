@@ -4,10 +4,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPosts from "../components/BlogPosts.astro";
 import { YouTube } from "@astro-community/astro-embed-youtube";
 
-const response = await fetch(
-  "https://owen-wilson-wow-api.onrender.com/wows/random"
-);
-const data = await response.json();
+// const response = await fetch(
+//   "https://owen-wilson-wow-api.onrender.com/wows/random"
+// );
+// const data = await response.json();
 
 const message =
   "Creator and lead maintainer of 🌙 LunarVim and ⚡ Zap. Teaching and streaming software developement.";
@@ -47,9 +47,9 @@ const message =
     <a href="/blog/1">All Posts →</a>
   </div>
 
-  <audio id="myAudio">
-    <source src={data[0].audio} type="audio/mpeg" />
-  </audio>
+  <!-- <audio id="myAudio"> -->
+  <!--   <source src={data[0].audio} type="audio/mpeg" /> -->
+  <!-- </audio> -->
 
   <h2>Latest Video</h2>
 
@@ -57,9 +57,9 @@ const message =
     <YouTube id="https://www.youtube.com/watch?v=LhDMw6n3GI4" />
   </div>
 
-  <script>
-    import "../scripts/sound.js";
-  </script>
+  <!-- <script> -->
+  <!--   import "../scripts/sound.js"; -->
+  <!-- </script> -->
 </BaseLayout>
 
 <style>
