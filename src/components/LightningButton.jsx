@@ -40,7 +40,7 @@ export default function LightningButton() {
           size="17"
           style={{ marginRight: ".4rem" }}
         />
-        tip
+        Tip
       </button>
     </div>
   );
