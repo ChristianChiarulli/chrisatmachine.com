@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+  @apply text-blue-500 hover:text-blue-500/95;
+}
+
+@font-face {
+  font-family: "FuturaLocal";
+  src: url("./fonts/Futura/Futura-Medium-01.ttf") format("truetype");
+  font-style: normal;
+  weight: 500;
+}
+
+@font-face {
+  font-family: "FuturaLocalBold";
+  src: url("./fonts/Futura/Futura-Bold-03.ttf") format("truetype");
+  font-style: bold;
+  weight: 700;
+}
+
+@font-face {
+  font-family: "FuturaLocal";
+  src: url("./fonts/Futura/Futura-MediumItalic-02.ttf") format("truetype");
+  font-style: italic;
+  weight: 500;
+}
